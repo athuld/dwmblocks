@@ -15,17 +15,18 @@
  * pathc - path of the program to be executed on clicks */
 static Block blocks[] = {
 /*      pathu                           pathc                                   interval        signal */
-        { PATH("time.sh"),              NULL,                                   30,             10},
+        { PATH("memory.sh"),            PATH("memory_button.sh"),		5,              3},
 
-        { PATH("calendar.sh"),          NULL,                                   30,             3},
+        { PATH("netraff.sh"),           NULL,               			1,              0},
 
-        { PATH("volume.sh"),            PATH("volume_button.sh"),               0,              1},
+        { PATH("volume.sh"),            PATH("volume_button.sh"),               1,              1},
 
         { PATH("cpu_temp.sh"),          PATH("cpu_temp_button.sh"),             1,              4},
 
-        { PATH("battery.sh"),           PATH("battery_button.sh"),              30,             2},
+        { PATH("battery.sh"),           PATH("battery_button.sh"),              3,             2},
 
+        { PATH("datetime.sh"),          NULL,                                  30,              0},
         { NULL } /* just to mark the end of the array */
 };
 
-static const char *delim =  "   ";
+static const char *delim =  " | ";
